@@ -8,7 +8,7 @@ def super_digit(n)
 
 end
 
-# might need this 
+# might need this
 def super_digit_helper (starting_num, hold_digit_sum)
 end
 
