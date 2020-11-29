@@ -45,8 +45,8 @@ def fib_helper(solution_arr, current, n)
   end
 end
 
-# putting this here for practice with O(1) space complexity (will still have O(n) time thanks to correspondence
-# with the stack)
+# putting this here for practice with O(1)* space complexity (will still have O(n) time thanks to correspondence
+# with the stack) (* actually this still might be O(n))
 # since we only REALLY need the last two elements of the array prior to finding the next Fib number,
 # we can continually replace values in the array holding our solutions with an array holding the last number and
 # the next number we calculate, otherwise the function should be pretty much the same
@@ -77,9 +77,7 @@ def faster_fib_helper(solution_arr, current, n)
     # we only have current number of elements at this point
     # we have to specifically save this in solution_arr, if we do it in the function call
     # it will create a new slot instead of re-using the old one i think
-    temp = solution_arr[0] + solution_arr[1]
-    solution_arr[0] = solution_arr[1]
-    solution_arr[1] = temp
+    solution_arr = [solution_arr[1], solution_arr[0] + solution_arr[1]]
     return faster_fib_helper(solution_arr, current + 1, n)
   end
 
