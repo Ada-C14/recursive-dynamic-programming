@@ -47,7 +47,7 @@ end
 #                    super_digit with space complexity of (technically O(log q) to represent the growth of the number of
 #                    recursive calls in the stack as demonstrated in the comments for the previous function) O(1), for all
 #                    intents and purposes, is called k times for k * O(1) = O(k). The second super_digit call will have a
-#                    adds another O(1) space xomplexity operation that can be considered negligible, as the size of k
+#                    adds another O(1) space complexity operation that can be considered negligible, as the size of k
 #                    will be the main contributing factor to the space complexity.
 def refined_super_digit(n, k)
   sum = 0
