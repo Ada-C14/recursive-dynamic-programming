@@ -37,8 +37,18 @@ def super_digit(n)
 
 end
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(k * log n) assuming n is the number and k is the number of times n is repeated over itself.
+#                    super_digit() is called k times then again for the sum of k super_digit outputs (q), and for all intents
+#                     and purposes I am counting super_digit an O(log n) operation for a total of k * log n + log q calls,
+#                     which still devolves to O(k * log n), as in the second super_digit call the number input will be
+#                     significantly smaller than n.
+# Space Complexity - O(k) refined_super_digits doesn't call itself but it calls super_digit, so the sum variable is an
+#                    O(1) operation. Thus, we will rely on how large the stack gets for each super_digit call. Again,
+#                    super_digit with space complexity of (technically O(log q) to represent the growth of the number of
+#                    recursive calls in the stack as demonstrated in the comments for the previous function) O(1), for all
+#                    intents and purposes, is called k times for k * O(1) = O(k). The second super_digit call will have a
+#                    adds another O(1) space xomplexity operation that can be considered negligible, as the size of k
+#                    will be the main contributing factor to the space complexity.
 def refined_super_digit(n, k)
   sum = 0
   k.times do
