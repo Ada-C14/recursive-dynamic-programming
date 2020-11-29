@@ -11,8 +11,9 @@
 # Hint, you may want a recursive helper method
 # Hint:  Fib(0) = 0, Fib(1) = 1, work up from there
 def fibonacci(n)
-  # return fib_helper([0, 1], 2, n)
-  return faster_fib_helper([0, 1], 2, n)
+  return fib_helper([0, 1], 2, n)
+  # if you'd like to test what i THINK is an O(1) space complexity solution.....
+  # return faster_fib_helper([0, 1], 2, n)
 end
 # fib helper stores all elements found so far in the same array
 # this way we don't have to repeatedly go deeper in the recursive tree
