@@ -13,6 +13,7 @@
 def fibonacci(n)
   return fib_helper([0, 1], 2, n)
   # if you'd like to test what i THINK is an O(1) space complexity solution.....
+  # i did run this through the tests and it SHOULD work:
   # return faster_fib_helper([0, 1], 2, n)
 end
 # fib helper stores all elements found so far in the same array
