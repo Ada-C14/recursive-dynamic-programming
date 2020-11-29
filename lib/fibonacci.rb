@@ -78,7 +78,7 @@ def faster_fib_helper(solution_arr, current, n)
     temp = solution_arr[0] + solution_arr[1]
     solution_arr[0] = solution_arr[1]
     solution_arr[1] = temp
-    return fib_helper(solution_arr, current + 1, n)
+    return faster_fib_helper(solution_arr, current + 1, n)
   end
 
 end
