@@ -8,16 +8,15 @@
 def super_digit(n)
   n = n.to_i if n.class != Integer
   return n if n < 10
-
-  # n_array = n.digits ~ I think this is worse time?
+  # n_array = n.digits ~ worse time complexity than line 12?
   n_array = n.to_s.chars.map(&:to_i)
   result = n_array.sum
   return super_digit(result)
 end
 
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n) - calls on super_digit which is O(n)?
+# Space Complexity - O(n)
 def refined_super_digit(n, k)
   return n if n < 10
   n = n.to_s
