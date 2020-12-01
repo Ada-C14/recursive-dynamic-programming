@@ -1,15 +1,26 @@
 # Superdigit
+# constraints from https://www.hackerrank.com/challenges/super-digit/problem
+# n >= 1
+# for refined problem assume n >= 1, k >= 1
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n)
+# Space Complexity - O(n) - n_array will be have n number of values
 def super_digit(n)
-   
+  n = n.to_i if n.class != Integer
+  return n if n < 10
+  # n_array = n.digits ~ worse time complexity than line 12?
+  n_array = n.to_s.chars.map(&:to_i)
+  result = n_array.sum
+  return super_digit(result)
 end
-  
 
-# Time Complexity - ?
-# Space Complexity - ?
+
+# Time Complexity - O(n) - calls on super_digit which is O(n)?
+# Space Complexity - O(n)
 def refined_super_digit(n, k)
-    
+  return n if n < 10
+  n = n.to_s
+  n *= k
+  return super_digit(n)
+
 end
-    
