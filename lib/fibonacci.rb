@@ -1,7 +1,7 @@
 # Improved Fibonacci
 
 # Time Complexity - O(n), it goes thru every number less than n, so it's O(n).
-# Space Complexity - O(n), it saves every number less than fib(n), so it's O(n).
+# Space Complexity - O(n), it saves every number less than fib(n) in the array "store_array", so it's O(n).
 # Hint, you may want a recursive helper method
 # Hint:  Fib(0) = 0, Fib(1) = 1, work up from there
 def fibonacci(n)
