@@ -17,9 +17,9 @@ def super_helper(n, sum)
   return super_helper(n/10, sum)
 end
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n), same as superdigit, it depends on the digits of the number, so the time complexity is O(n). 
+# Space Complexity - O(1), same as superdigit, only use two extra variables, so the space complexity is O(1).
 def refined_super_digit(n, k)
-    
+  return super_digit((k.to_s * n).to_i)
 end
     
