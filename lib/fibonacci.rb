@@ -1,3 +1,5 @@
+require 'benchmark'
+
 # Improved Fibonacci
 
 # Time Complexity - O(n), it goes thru every number less than n, so it's O(n).
@@ -14,4 +16,13 @@ def fib_helper(store_array, current, n)
   store_array.push(store_array[current-1]+store_array[current-2])
   return store_array[current] if current == n 
   return fib_helper(store_array, current+1, n)
+end
+
+ans = nil
+fib_to_find = 39
+
+Benchmark.bm(20) do |bm|
+  bm.report('Fib recursive') do
+    ans = fibonacci(fib_to_find)
+  end
 end

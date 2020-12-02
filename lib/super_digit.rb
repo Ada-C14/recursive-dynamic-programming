@@ -1,3 +1,5 @@
+require 'benchmark'
+
 # Superdigit
 
 # Time Complexity - O(n), it depends on how many digits of a number, so it's O(n). 
@@ -20,6 +22,21 @@ end
 # Time Complexity - O(n), same as superdigit, it depends on how many digits of a number, so the time complexity is O(n). 
 # Space Complexity - O(1), same as superdigit, only use two extra variables, so the space complexity is O(1).
 def refined_super_digit(n, k)
-  return super_digit((k.to_s * n).to_i)
+  return super_digit((n.to_s * k).to_i)
+end
+
+
+ans1 = nil
+ans2 = nil
+super_digit = 9875
+
+Benchmark.bm(20) do |bm|
+  bm.report('Super digit') do
+    ans1 = super_digit(super_digit)
+  end
+
+  bm.report('refined Super digit') do
+    ans1 = refined_super_digit(super_digit, 3)
+  end
 end
     
