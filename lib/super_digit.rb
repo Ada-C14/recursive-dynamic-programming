@@ -25,7 +25,6 @@ def refined_super_digit(n, k)
   return super_digit((n.to_s * k).to_i)
 end
 
-
 ans1 = nil
 ans2 = nil
 super_digit = 9875
@@ -36,7 +35,7 @@ Benchmark.bm(20) do |bm|
   end
 
   bm.report('refined Super digit') do
-    ans1 = refined_super_digit(super_digit, 3)
+    ans2 = refined_super_digit(super_digit, 3)
   end
 end
     
