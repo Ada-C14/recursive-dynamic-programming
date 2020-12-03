@@ -17,7 +17,7 @@ def super_digit(n)
 end
 
 
-# Time Complexity - O(nm) - m = number of times super_digit is called, n = number of digits in n
+# Time Complexity - O(nm) - m = number of times refined_super_digit is called, n = number of digits in n
 # Space Complexity - O(n)
 def refined_super_digit(n, k)
   return n if n % 10 == n
