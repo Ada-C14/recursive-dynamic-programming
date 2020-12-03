@@ -33,7 +33,7 @@ describe "super_digit" do
     expect(answer).must_equal 6
   end
 
-  xdescribe "refined superdigit" do
+  describe "refined superdigit" do
     it "will return 1 for n = 1 and k = 1" do
       # Act
       answer = refined_super_digit(1, 1)
