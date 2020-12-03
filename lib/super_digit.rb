@@ -29,13 +29,12 @@ def super_digit_helper(n, sum = 0)
   return super_digit_helper(n/10, (sum + digit))
 end
 
-# # PLEASE CHECK
-# # super_digit using % 9
-# # # Time Complexity: O(1)?
-# # # Space Complexity: O(1)?
-# def super_digit(n)
-#   return 1 + ((n-1) % 9)
-# end
+# super_digit using % 9
+# # Time Complexity: O(1)?
+# # Space Complexity: O(1)?
+def super_digit(n)
+  return 1 + ((n-1) % 9)
+end
 
 # Time Complexity - O(log n * log k) scales with number of digits in n and number of digits in k??
 # Space Complexity - O(log n * log k)
@@ -45,7 +44,6 @@ def refined_super_digit(n, k)
   return super_digit_helper(super_digit * k, 0)
 end
 
-# # PLEASE CHECK
 # # refined_super_digit using % 9
 # # Time Complexity: O(1)?
 # # Space Complexity: O(1)?
