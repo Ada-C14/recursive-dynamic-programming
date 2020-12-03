@@ -41,8 +41,21 @@ def helper_digits(n)
 end
   
 
-# Time Complexity - ?
+# Time Complexity - O(n log n)
+# essentially the same logic as the super_digit method
+# TODO because that logic is so solid, ha
+# refined_super_digit gets called once and then essentially
+# treats super_digit as a helper method
+# so we're adding two additional function calls on to the
+# super_digits time complexity but that's a constant and can be
+# pretty much ignored.
+#
 # Space Complexity - ?
+# TODO
+# whatever the other one is, probably
+# we're adding one additional round of function calls
+# and one additional round of making string and array
+# but that's pretty much it
 def refined_super_digit(n, k)
   return n * k if n * k < 10
 
