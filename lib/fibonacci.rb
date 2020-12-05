@@ -1,8 +1,7 @@
 # Improved Fibonacci
 
-# Time Complexity - O(n), the stack will be proportional to the size of n
-# Space Complexity - ?  (should be O(n))
-# Hint, you may want a recursive helper method
+# Time Complexity - O(n), the number of stack calls is be proportional to the size of n
+# Space Complexity - O(n) the call stack depth is proportion to the size of n
 # Hint:  Fib(0) = 0, Fib(1) = 1, work up from there
 def fibonacci(n)
   raise ArgumentError if n < 0
