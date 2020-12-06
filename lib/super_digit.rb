@@ -12,7 +12,7 @@
 # >> add this num to sum
 # >> update the input by dividing by 10 (int division)
 # >> know when to stop updating when n is 0
-# (meaning in the last iteration, n was a single digit, which we added to sum)
+# (meaning in the last iteration, n % 10 gave us the final digit, which we added to sum)
 # >> keep calling fn until input n is a single digit (n / 10 == 0)
 
 # Time Complexity: O(n^2), where n is the number of digits in n
