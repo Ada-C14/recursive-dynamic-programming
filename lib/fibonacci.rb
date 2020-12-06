@@ -1,7 +1,7 @@
 # Improved Fibonacci
 
 # Time Complexity - O(n), go through fib for each number one at a time until you reach n
-# Space Complexity - ?  (should be O(n)), storing n fibonacci numbres
+# Space Complexity - ?  (should be O(n)), storing n fibonacci numbers
 # Hint, you may want a recursive helper method
 # Hint:  Fib(0) = 0, Fib(1) = 1, work up from there
 def fibonacci(n)
