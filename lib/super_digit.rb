@@ -16,7 +16,6 @@ def super_digit(n)
 
 end
 
-# Is this right?  There is definitely a nested method call but it's just to get the initial value
 # Time Complexity - O(n) where n is the number of digits in n
 # Space Complexity - O(n) due to the call stack when calling super
 def refined_super_digit(n, k)
