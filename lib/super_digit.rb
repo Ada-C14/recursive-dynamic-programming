@@ -21,8 +21,8 @@ end
 # end
   
 
-# Time Complexity - O(logn) - k is effectively reduced to nothing
-# It is used as a one-time multiplication constant. Thus complexity of super_digit applies
+# Time Complexity - O(log nk) - k is effectively reduced to a constant
+# Thus complexity of super_digit applies times k
 # Space Complexity - O(logn) - System stack
 def refined_super_digit(n, k)
   raise ArgumentError if n < 0
