@@ -12,9 +12,6 @@ end
 def fib_helper(solution, current, n)
   return n if n == 0 || n == 1
 
-  p solution
-  p current
-
   if current == n
     return solution[0] + solution[1]
   end
