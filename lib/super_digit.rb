@@ -8,8 +8,9 @@ def super_digit(n)
   return super_digit(new)
 end
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n)
+# Space Complexity - O(n)
 def refined_super_digit(n, k)
-    
+  int = ((n.to_s)*k).to_i
+  return super_digit(int)
 end
