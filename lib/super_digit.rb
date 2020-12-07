@@ -1,9 +1,11 @@
 # Superdigit
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n) where n is the length of the number passed to the method
+# Space Complexity - O(n) due to array of digits, .sum
 def super_digit(n)
   return n if n >= 0 && n <= 9
+
+  n = n.abs if n < 0 # account for negative numbers, because those are still technically integers
 
   single_digits_array = n.digits
 
@@ -13,38 +15,18 @@ def super_digit(n)
 end
   
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - still O(n), as new_n is just another constant introduced?
+# Space Complexity - still O(n), as new_n is just anther constant introduced?
 def refined_super_digit(n, k)
 
   single_digits_array = n.digits
 
-  # single_digits_array = (n.digits) * k
+  single_digit_sum = single_digits_array.sum # create a memo of the sum of n digits before introducing k
 
-  # pp single_digits_array
+  new_n = single_digit_sum * k # now multiply it by k before introducing recursion
 
-  single_digit_sum = single_digits_array.sum
+  return super_digit(new_n) # call recursion on the new_n, rather than on n, k number of times reduces complexity?
 
-  # pp single_digit_sum
-  new_n = single_digit_sum * k
-
-  return super_digit(new_n)
-
-  # current = super_digit(single_digit_sum)
-
-  # super_digit_n = super_digit(single_digit_sum)
-  #
-  # return super_digit(super_digit_n * k)
+  # e.g instead of return super_digit(super_digit_sum * k)
 
 end
-
-# p super_digit(super_digit(148) * 3)
-p super_digit(148)
-
-p refined_super_digit(148, 3) # 3
-# p super_digit(9875)
-
-# p 10.digits.to_i
-# p 100 % 10
-
-# super_digit(1) + super_digit(1) -> super_digit(2) --> 2
