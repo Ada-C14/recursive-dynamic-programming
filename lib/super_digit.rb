@@ -59,14 +59,3 @@ def refined_super_digit(n, k)
     return super_digit(refined)
   end
 end
-
-
-# not sure this is dynamic but I liked it anyway
-# it's neater
-#
-# def refined_super_digit(n, k)
-#   return n * k if n * k < 10
-#
-#   sum = helper_digits(n)
-#   return super_digit(sum * k)
-# end
