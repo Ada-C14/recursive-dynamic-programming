@@ -1,7 +1,9 @@
 # Superdigit
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(logn)
+# We are dividing by 10 each time so I think it is O(logn)
+# Space Complexity - O(n)
+# The stack grows in proportion to the size of n
 def super_digit(n)
   return n if n < 10
   digit_sum = super_digit_helper(n)
