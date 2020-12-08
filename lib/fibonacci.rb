@@ -9,24 +9,6 @@ def fibonacci(n)
     raise ArgumentError
   end
 
-  if n == 0 || n == 1
-    return n
-  end
-
-  solutions = [0, 1]
-  current = 2
-
-  while current < n
-    solutions << solutions[current - 1] + solutions[current - 2]
-    current += 1
-  end
-
-  return solutions[current - 1] + solutions[current - 2]
-end
-
-# Recursive Solution
-
-def fibonacci_recursive(n)
   return fib_helper([0, 1], 2, n)
 end
 
