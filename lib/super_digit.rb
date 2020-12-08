@@ -1,19 +1,13 @@
 # Superdigit
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - o(n)
+# Space Complexity - o(n)
 def super_digit(n)
   if n < 10
     return n
   end
-
-  super_digit(sum_digits(n))
-
-end
-
-def sum_digits(integer)
-  return digits = integer.to_s.split("").map { |num| num.to_i }.sum
-
+  digits = n.to_s.split("").map { |num| num.to_i }.sum
+  super_digit(digits)
 end
 
 # Time Complexity - ?
