@@ -55,7 +55,6 @@ describe "Fibonacci" do
   end
 
   it "will return 354224848179261915075 for fib(100)" do
-    # Act
     answer = fibonacci(100)
 
     # Assert
