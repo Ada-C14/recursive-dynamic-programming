@@ -21,12 +21,10 @@ def refined_super_digit(n, k)
 
   single_digits_array = n.digits
 
-  single_digit_sum = single_digits_array.sum # find sum of n digits before introducing k
+  single_digit_sum = single_digits_array.sum # find sum of n digits before introducing k (make a memo of this sum, to avoid having to find the sum of the entirety of k.digits)
 
   new_n = single_digit_sum * k # now multiply it by k before introducing recursion
 
-  return super_digit(new_n) # call recursion on the new_n, rather than on n, k number of times...because this reduces complexity I think??
-
-  # e.g instead of return super_digit(super_digit_sum * k)
+  return super_digit(new_n) # call recursion on the new_n
 
 end
