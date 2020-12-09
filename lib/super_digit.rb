@@ -1,7 +1,7 @@
 # Superdigit
 
 # Time Complexity - O(logn)
-# Space Complexity - O(n)
+# Space Complexity - O(n) - system stack
 def super_digit(n)
   sum_digits = sum_digits(n)
 
@@ -20,8 +20,8 @@ def sum_digits(n)
 end
 
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(logn)
+# Space Complexity - O(n) - system stack
 def refined_super_digit(n, k)
   return super_digit(n * k)
 end
