@@ -1,6 +1,6 @@
 # Improved Fibonacci
 
-# Time Complexity - ?
+# Time Complexity - O(n)
 # Space Complexity - ?  (should be O(n))
 # Hint, you may want a recursive helper method
 # Hint:  Fib(0) = 0, Fib(1) = 1, work up from there
