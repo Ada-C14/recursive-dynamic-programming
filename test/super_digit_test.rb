@@ -1,6 +1,7 @@
 require_relative "test_helper"
 
-xdescribe "super_digit" do
+
+describe "super_digit" do
   it "will return 2 for super_digit(9875)" do
     # Act
     answer = super_digit(9875)
