@@ -1,7 +1,7 @@
 # Superdigit
 
 # Time Complexity - O(n) or O(logn)? I can't quite picture what the graph looks like with a massive number.
-# Space Complexity - ?
+# Space Complexity - O(1)
 def super_digit(n)
   raise TypeError, "n must be a positive integer" unless n.is_a?(Integer)
   raise ArgumentError, "n must be a positive integer!" if n < 0
