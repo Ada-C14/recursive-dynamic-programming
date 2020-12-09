@@ -1,11 +1,10 @@
 # Superdigit
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n)
+# Space Complexity - O(n)
 def super_digit(n)
-  return n.digits.sum if n.digits.length <= 1
-
-  return super_digit(n/10).floor
+  return n if n < 10 # base case
+  return super_digit(n.digits.sum) # tail recursion
 
 end
   
@@ -17,3 +16,4 @@ def refined_super_digit(n, k)
 end
 
 p super_digit(9875)
+p super_digit(9875000000)

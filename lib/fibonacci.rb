@@ -11,7 +11,7 @@ def fibonacci(n)
 end
 
 def fib_helper(solutions, current, n)
-  return n if n == 0 || n == 1
+  return n if n == 0 || n == 1 # base case
 
   if current == n
     return solutions[n - 1] + solutions[n - 2]
