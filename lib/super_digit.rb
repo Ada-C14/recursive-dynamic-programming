@@ -1,13 +1,20 @@
 # Superdigit
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n)
+# Space Complexity - O(n)
 def super_digit(n)
+  # n < 10 ?  n : super_digit(n.digits.sum)
+  return n if n < 10
 
-  #i feel like i'm cheating here. I know that .digits creates a new array...wondering how
-  # this will affect the time/space complexities..o(n^2)?
-  n < 10 ?  n : super_digit(n.digits.sum)
+  sum = super_digit_helper(n,0)
+  super_digit(sum)
+end
 
+def super_digit_helper(n, memo)
+  return memo if n == 0
+  memo += n % 10
+
+  super_digit_helper(n/10, memo)
 end
 
   
