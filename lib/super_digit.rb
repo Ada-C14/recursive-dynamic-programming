@@ -14,6 +14,3 @@ end
 def refined_super_digit(n, k)
     
 end
-
-p super_digit(9875)
-p super_digit(9875000000)
