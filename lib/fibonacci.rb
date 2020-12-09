@@ -12,13 +12,11 @@ end
 def fib_helper(i, j, current, n)
 
   return n if n == 0 || n == 1
-
   return i + j if current == n
 
   temp = i
   i = j
   j = temp + j
-
-  return fib_helper(i, j, current + 1, n)
+  fib_helper(i, j, current + 1, n)
 
 end
