@@ -47,7 +47,7 @@ So the super_digit of `9875` is `2`.
 
 ## Refined Super Digit - Optional
 
-In this exercise we will build on the Superdigit concept.  A refined superdigit is a determined by concatenating a numbrer `n` a specific `k` number of times and then calculating the superdigit.  
+In this exercise we will build on the Superdigit concept.  A refined superdigit is a determined by concatenating a number `n` a specific `k` number of times and then calculating the superdigit.  
 
 For example if k = 3 and n = 148
 
