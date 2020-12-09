@@ -1,8 +1,9 @@
 # Superdigit
 
-# Time Complexity - O(logn) - n is reduced by a significant factor each recursion
-# This goes for the helper method sum_of_digits as well
-# Space Complexity - O(logn) - system stack
+# (where n is number of digits)
+# Time Complexity - O(n^2)
+# O(n) for sum of digits * O(n) (low coefficient) for super_digit
+# Space Complexity - O(n^2) - system stack
 def super_digit(n)
   raise ArgumentError if n < 0
   return n if n < 10
@@ -19,11 +20,10 @@ end
 #   return n if n < 10
 #   super_digit_helper(n / 10, n % 10)
 # end
-  
 
-# Time Complexity - O(log nk) - k is effectively reduced to a constant
-# Thus complexity of super_digit applies times k
-# Space Complexity - O(logn) - System stack
+# (where n is number of digits)
+# Time Complexity - O(kn^2) - O(n^2) for super_digit, k as a constant multiplier
+# Space Complexity - O(n^2) - System stack
 def refined_super_digit(n, k)
   raise ArgumentError if n < 0
   return n if n < 10
