@@ -7,21 +7,21 @@
 #
 # 0 1 1 2 3 5 8 13 21 31..
 def fibonacci(n) #5
-  return fib_helper([0,1], 2, n)
+  raise ArgumentError if n < 0
 
+  return fib_helper([0,1], 2, n)
 end
 
 def fib_helper(solutions, current, n)
-  if n == 0 || n == 1
-    return n
-  elsif n < 0
-    raise ArgumentError
+  return n if n == 0 || n == 1
+
+  if n == current
+    return solutions[0] + solutions[1]
   end
 
-  if current == n
-    return solutions[n-1] + solutions[n-2]
-  end
+  temp = solutions[0]
+  solutions[0] = solutions[1]
+  solutions[1] += temp
 
-  solutions << solutions[current - 1] + solutions[current - 2]
   return fib_helper(solutions, current + 1, n)
 end
