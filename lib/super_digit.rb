@@ -1,6 +1,7 @@
 # Superdigit
 
-# Time Complexity - O(n) where n is number of digits
+# Time Complexity - O(n^2) where n is number of digits
+# loop through each digit to calculate the sum and then call function recursively n-1 times
 # Space Complexity - O(n); n calls on the stack
 def super_digit(n)
   return n if n < 10
@@ -15,9 +16,12 @@ def super_digit(n)
 end
   
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n^2)
+# Space Complexity - O(n)
+# same time and space complexity as super_digit
 def refined_super_digit(n, k)
-  return super_digit(k * super_digit(n))
+  # return super_digit(n * k)
+  num = (n.to_s * k).to_i
+  return super_digit(num)
 end
     
