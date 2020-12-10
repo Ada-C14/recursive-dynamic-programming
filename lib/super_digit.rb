@@ -17,8 +17,8 @@ def super_digit(n)
 end
   
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n^2 k^2)
+# Space Complexity - O(n)
 def refined_super_digit(n, k)
   sum = 0
   k.times do
