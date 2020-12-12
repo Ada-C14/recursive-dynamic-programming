@@ -13,9 +13,10 @@
 # super_digit(2) --> 2
 # So the super_digit of 9875 is 2.
 
-# Time Complexity - O(log n) scales logarithmically with magnitude of n (??)
-# but scales linearly with number of digits in n (??)
-# Space Complexity - O(log n)
+# Time Complexity - O(log n) - scales logarithmically with magnitude of n (??)
+# but O(n^2) where n is the number of digits (??)
+# Space Complexity - O(log n) where n is magnitude (??)
+# but O(n) if n is number of digits (??)
 def super_digit(n)
   super_digit_helper(n, 0)
 end
@@ -38,8 +39,8 @@ end
 # end
 
 # Time Complexity - O(log n * log k) scales logarithmically with magnitude of n and k (??)
-# but scales linearly with number of digits in n and number of digits in k (??)
-# Space Complexity - O(log n * log k)
+# but O((n*k)^2) where n is number of digits and k is the number of digits in the multiplier (??)
+# Space Complexity - same as time complexity
 def refined_super_digit(n, k)
   super_digit = super_digit_helper(n, 0)
 
