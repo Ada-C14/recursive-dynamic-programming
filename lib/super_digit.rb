@@ -15,8 +15,9 @@ def sd_helper(n, m = 0)
 end
   
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - O(n), where n = number of digits of the integer
+# Space Complexity - O(n), where n = number of digits of the integer.
+
 def refined_super_digit(n, k)
   return n if n == 1 && k == 1
 
