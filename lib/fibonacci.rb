@@ -7,16 +7,17 @@
 def fibonacci(n)
   raise ArgumentError if n < 0
 
-  return fibonacci_helper([0, 1], 2, n)
+  return fibonacci_helper(0, 1, 2, n)
 end
 
-def fibonacci_helper(previous, current, n)
+def fibonacci_helper(initial, previous, current, n)
 
   return n if n == 0 || n == 1
+  return initial + previous if current == n
 
-  if current == n
-    return previous[n - 1] + previous[n - 2]
-  end
+  temp = initial
+  initial = previous
+  previous = temp + previous
 
-  return fibonacci_helper(previous, current + 1, n)
+  return fibonacci_helper(initial, previous, current + 1, n)
 end
