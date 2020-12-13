@@ -18,6 +18,12 @@ end
 # Time Complexity - ?
 # Space Complexity - ?
 def refined_super_digit(n, k)
-    
+  return n if n == 1 && k == 1
+
+  int_to_s = n.to_s
+  shaped_integer = int_to_s + int_to_s + int_to_s
+  str_to_int = shaped_integer.to_i
+
+  super_digit(str_to_int)
 end
-    
+
