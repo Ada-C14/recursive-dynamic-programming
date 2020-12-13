@@ -1,7 +1,7 @@
 # Superdigit
 
-# Time Complexity - ?
-# Space Complexity - ?
+# Time Complexity - best case scenario, where n has only 1 digit, is O(1) - constant; otherwise is O(n), where n = number of digits of the integer
+# Space Complexity - O(n), where n = number of digits of the integer
 def super_digit(n)
   return n if n < 10
   sum = sd_helper(n)
