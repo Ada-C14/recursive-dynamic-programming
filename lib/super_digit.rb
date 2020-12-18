@@ -18,6 +18,7 @@ end
 # Time Complexity - O(n^2)
 # Space Complexity - O(n)
 def refined_super_digit(n, k)
-  return super_digit(n * k)
+  n_super_digit = super_digit(n)
+  return super_digit(n_super_digit * k)
 end
     
