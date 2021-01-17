@@ -1,9 +1,18 @@
 # Improved Fibonacci
+# Time Complexity - O(n)
+# Space Complexity - O(n)
 
-# Time Complexity - ?
-# Space Complexity - ?  (should be O(n))
-# Hint, you may want a recursive helper method
-# Hint:  Fib(0) = 0, Fib(1) = 1, work up from there
 def fibonacci(n)
-  raise NotImplementedError, "Please implement this method for the project"
+  return fib_helper(0, 1, 2, n)
+end
+
+def fib_helper(fib_minus_two, fib_minus_one, current, n)
+  return n if n == 0 || n == 1
+  raise ArgumentError if n < 0
+
+  if current == n
+    return fib_minus_one + fib_minus_two
+  end
+
+  return fib_helper(fib_minus_one, fib_minus_one + fib_minus_two, current + 1, n)
 end
